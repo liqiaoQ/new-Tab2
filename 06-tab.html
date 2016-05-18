@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	<style type="text/css">
+div, ul, li, a {
+	margin:0;
+	padding:0;
+}
+ul, li {
+	list-style:none;
+}
+body {
+	font-size:14px;
+	background-color:#f7f7f7;
+}
+a {
+	color:#666;
+	text-decoration:none;
+}
+a:hover {
+	color:#F60;
+}
+#title li {
+	float:left;
+	
+	border:1px solid #dedede;
+	background:#FFF;
+	width:40px;
+	text-align:center;
+	height:28px;
+	line-height:28px;
+	position: relative;
+	z-index:1000;
+}
+#title, #wrap {
+	clear:both;
+	background-color:#FFF;
+	width:300px;
+}
+#wrap {
+	border:1px solid #dedede;
+	height:300px;
+	position:relative;
+	top:-1px;
+	padding:10px;
+}
+#wrap>div {
+	display:none;
+}
+#wrap .active {
+	display:block;
+}
+#title .ho {
+	border-bottom:1px solid #FFF;
+}
+#title .ho a {
+	color:#F60;
+}
+</style>
+<script src="jquery-1.4.2.min.js" type="text/javascript">
+	
+</script>
+<script type="text/javascript">
+//	$(function(){
+//		function tab(pa){
+//		$(pa+" .title li").click(function(){
+//			var ind = $(pa+" .title li").index($(this));
+//			$(pa+" .wrap div:visible").hide();
+//			$(pa+" .wrap div:eq("+ind+")").show();
+//			$(pa+" .title li.ho").removeClass("ho");
+//			$(this).addClass("ho");
+//			
+//		})
+//		}
+//		new tab(".tab1");
+//	})
+
+//$(function(){
+//	function tab(pa){
+//		$(pa+" .title li").click(function(){
+//			var ind = $(pa+" .title li").index($(this));
+//			$(pa+" .wrap div:visible").hide();
+//			$(pa+" .wrap div:eq("+ind+")").show();
+//			$(pa+" .title li.ho").removeClass("ho");
+//			$(this).addClass("ho");
+//		})
+//	}
+//	new tab(".tab1");
+//})
+
+//$(function(){
+//	function tab(pa){
+//		$(pa+" .title li").click(function(){
+//			var ind = $(this).index($(this));
+//			$(pa+" .wrap div:visible").hide();
+//			$(pa+" .wrap div:eq("+ind+")").show();
+//			$(pa+" .title li.ho").removeClass("ho");
+//			$(this).addClass("ho");
+//		})
+//	}
+//	new tab(".tab1");
+//})
+
+$(function(){
+	function tab(pa){
+		$(pa+" .title li").click(function(){
+			var ind = $(this).index($(this));
+			$(pa+" .wrap div:visible").hide();
+			$(pa+" .wrap div:eq("+ind+")").show();
+			$(pa+" .title li.ho").removeClass("ho");
+			$(this).addClass("ho");
+		})
+	}
+	new tab(".tab1");
+})
+
+
+	
+</script>
+	</head>
+	<body>
+	<div class="tab1">
+<ul id="title" class="title">
+  <li class="ho"><a href="#">话费</a></li>
+  <li><a href="#">游戏</a></li>
+  <li><a href="#">旅行</a></li>
+  <li><a href="#">保险</a></li>
+</ul>
+<div id="wrap" class="wrap">
+  <div class="active"> this is con1</div>
+  <div > this is con2</div>
+  <div> this is con3</div>
+  <div > this is con4</div>
+</div>
+</div>
+	</body>
+</html>
